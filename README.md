@@ -2,7 +2,7 @@
 Diretório referente a atividade realizada na disciplina de Visualização de dados do curso de Bacharelado em Ciência da Computação
 
 # Base de dados
-A base de dados que utilizamos é do projeto MonitorAr-Rio, a pagina incial do projeto de encontra em https://ambienteclima.prefeitura.rio/monitoramento-diario-da-qualidade-do-ar/
+A base de dados que utilizamos é do projeto MonitorAr-Rio, a pagina inicial do projeto de encontra em https://ambienteclima.prefeitura.rio/monitoramento-diario-da-qualidade-do-ar/
 
 ## Links importantes
 * Link para planilha da base de dados: https://www.data.rio/datasets/PCRJ::qualidade-do-ar-dados-hor%C3%A1rios/explore?layer=2
@@ -12,9 +12,9 @@ A base de dados que utilizamos é do projeto MonitorAr-Rio, a pagina incial do p
 ## Descrição da base de dados
 Esta base de dados possui dados horários de qualidade do ar dos anos de 2011 até 2025 referentes a 8 estações de monitoramento do ar, como pode ser visto no arquivo amostra_data-set.csv presente neste repositório.
 A base de dados é multivariada e topológica.
-A base de dados possui até o momento 1.007.804 instancias, logo para a realização das tecnicas de vizualização de dados será necessário agrupar os dados ou selecionar uma amostra menor de dados, para evitarmos oclusão vizual e também não sobrecarregarmos os hardwares utilizados.
+A base de dados possui até o momento 1.007.804 instancias, logo para a realização das tecnicas de visualização de dados será necessário agrupar os dados ou selecionar uma amostra menor de dados, para evitarmos oclusão visual e também não sobrecarregarmos os hardwares utilizados.
 
-### Descrição dos paremetros colhidos pelas estações
+### Descrição dos parâmetros colhidos pelas estações
 As estações de monitoramento por meio de sensores, colhem parametros referentes a qualidade do ar, a seguir iremos listar os parametros colhidos por todas as estações:
 * Velocidade do Vento: metros por segundo
 * Direção do Vento: graus
@@ -31,7 +31,7 @@ Agora iremos listar os parametros especificos das estações (não são medidos 
 * $SO_2$ Dióxido de Enxofre
 * $HCNM$ Hidrocarbonetos Não-Metano
 * $HCT$ Hidrocarbonetos Totais
-* $CH_4$ Hidrocarboneto Metado, junto com $HCNM$ e $HCT$ formam o conjunto de variaveis $HC$ Hidrocarbonetos, assim como acreditamos que uma dessas variaveis é conseguida utilizando as outras duas
+* $CH_4$ Hidrocarboneto Metano, junto com $HCNM$ e $HCT$ formam o conjunto de variaveis $HC$ Hidrocarbonetos, assim como acreditamos que uma dessas variaveis é conseguida utilizando as outras duas
 * $CO$ Monóxido de Carbono
 * $NO$ Monóxido de Nitrogênio
 * $NO_2$ Dióxido de Nitrogênio
@@ -53,9 +53,9 @@ As concentrações de **Monóxido de Carbono** ($CO$) e **Hidrocarbonetos** ($HC
 ## Perguntas
 Os conhecimentos que buscamos explorar por meio da visualização de dados são:
 1. Como a variavel do Monóxido de Carbono ($CO$) se comporta durante os dias da semana. 
-2. 
-3. 
-4. 
+2. Existe um padrão de pico na concentração de NOx (óxido de nitrogênio) e CO (monóxido de carbono) durante os horários de maior fluxo de trânsito?
+3. Há alguma discrepância clara entre os dados de (definir algum) entre uma zona central e zonas mais afastadas?
+4. O quão significativa foi a queda geral de poluentes durante o isolamento da pandemia em comparação aos anos anteriores?
 
 ## Pré-processameanto
 ### Dados redundantes
