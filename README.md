@@ -11,6 +11,8 @@ A base de dados que utilizamos é do projeto MonitorAr-Rio, a pagina incial do p
 
 ## Descrição da base de dados
 Esta base de dados possui dados horários de qualidade do ar dos anos de 2011 até 2025 referentes a 8 estações de monitoramento do ar, como pode ser visto no arquivo amostra_data-set.csv presente neste repositório.
+A base de dados é multivariada e topológica.
+A base de dados possui até o momento 1.007.804 instancias, logo para a realização das tecnicas de vizualização de dados será necessário agrupar os dados ou selecionar uma amostra menor de dados, para evitarmos oclusão vizual e também não sobrecarregarmos os hardwares utilizados.
 
 ### Descrição dos paremetros colhidos pelas estações
 As estações de monitoramento por meio de sensores, colhem parametros referentes a qualidade do ar, a seguir iremos listar os parametros colhidos por todas as estações:
@@ -26,7 +28,7 @@ As estações de monitoramento por meio de sensores, colhem parametros referente
 * Sistema de Referência Geocêntrico para as Américas(SIRGAS 2000): coordenada x e y
 
 Agora iremos listar os parametros especificos das estações (não são medidos em todas as estações de monitoramento):
-* $SO_2$
+* $SO_2$ Dióxido de Enxofre
 * $HCNM$ Hidrocarbonetos Não-Metano
 * $HCT$ Hidrocarbonetos Totais
 * $CH_4$ Hidrocarboneto Metado, junto com $HCNM$ e $HCT$ formam o conjunto de variaveis $HC$ Hidrocarbonetos, assim como acreditamos que uma dessas variaveis é conseguida utilizando as outras duas
@@ -48,6 +50,13 @@ As concentrações de **Monóxido de Carbono** ($CO$) e **Hidrocarbonetos** ($HC
 7. Campo Grande (CG): NOx, O3, MP10
 8. Pedra de Guaratiba (PG): O3, MP10
 
+## Perguntas
+Os conhecimentos que buscamos explorar por meio da visualização de dados são:
+1. Como a variavel do Monóxido de Carbono ($CO$) se comporta durante os dias da semana. 
+2. 
+3. 
+4. 
+
 ## Pré-processameanto
 ### Dados redundantes
 Algumas variaveis podem ser conseguidas utilziando as outras, a seguir iremos as listar:
@@ -57,3 +66,6 @@ Algumas variaveis podem ser conseguidas utilziando as outras, a seguir iremos as
 ### Análise estatística
 * Detecção de dados espúrios:
 Detectar valores coletados com algum erro, para então remove-los da base de dados 
+
+### Informações externas 
+link para desrições do mapa do rio de janeiro https://www.rio.rj.gov.br/dlstatic/10112/6438610/4221811/74LUOSPLC572017.pdf
