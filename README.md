@@ -55,7 +55,9 @@ Os conhecimentos que buscamos explorar por meio da visualização de dados são:
 1. Como a variavel do Monóxido de Carbono ($CO$) se comporta durante os dias da semana. 
 2. Existe um padrão de pico na concentração de NOx (óxido de nitrogênio) e CO (monóxido de carbono) durante os horários de maior fluxo de trânsito?
 3. Há alguma discrepância clara entre os dados de (definir algum) entre uma zona central e zonas mais afastadas?
-4. O quão significativa foi a queda geral de poluentes durante o isolamento da pandemia em comparação aos anos anteriores?
+  1. Gráfico de Violino (Violin Plot): Eixo X com o nome das estações e eixo Y com a concentração
+5. O quão significativa foi a queda geral de poluentes durante o isolamento da pandemia em comparação aos anos anteriores?
+  1. Gráfico de linhas com a média dos poluentes ao longo dos anos, incluindo um bloco sombreado no fundo cobrindo exatamente os meses de 2020 e 2021 para contrastar a queda.
 
 ## Pré-processameanto
 ### Dados redundantes
