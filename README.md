@@ -34,6 +34,7 @@ Agora iremos listar os parametros especificos das estações (não são medidos 
 * $CH_4$ Hidrocarboneto Metano, junto com $HCNM$ e $HCT$ formam o conjunto de variaveis $HC$ Hidrocarbonetos, assim como acreditamos que uma dessas variaveis é conseguida utilizando as outras duas
 * $CO$ Monóxido de Carbono
 * $NO$ Monóxido de Nitrogênio
+* $O_3$ Ozônio
 * $NO_2$ Dióxido de Nitrogênio
 * $NOx$ Óxidos de Nitrogênio, junto com $NO$ e $NO_2$ formam o conjunto de variaveis $NOx$, tem seu valor calculado somando $NO$ com $NO_2$. 
 * $MP_{10}$ Material particulado com diâmetro aerodinâmico equivalente de corte de 10 micrômetros.
