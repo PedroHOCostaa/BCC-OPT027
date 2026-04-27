@@ -34,6 +34,7 @@ Agora iremos listar os parametros especificos das estações (não são medidos 
 * $CH_4$ Hidrocarboneto Metano, junto com $HCNM$ e $HCT$ formam o conjunto de variaveis $HC$ Hidrocarbonetos, assim como acreditamos que uma dessas variaveis é conseguida utilizando as outras duas
 * $CO$ Monóxido de Carbono
 * $NO$ Monóxido de Nitrogênio
+* $O_3$ Ozônio
 * $NO_2$ Dióxido de Nitrogênio
 * $NOx$ Óxidos de Nitrogênio, junto com $NO$ e $NO_2$ formam o conjunto de variaveis $NOx$, tem seu valor calculado somando $NO$ com $NO_2$. 
 * $O_3$ Gás Ozonio 
@@ -53,10 +54,12 @@ As concentrações de **Monóxido de Carbono** ($CO$) e **Hidrocarbonetos** ($HC
 
 ## Perguntas
 Os conhecimentos que buscamos explorar por meio da visualização de dados são:
-1. Em quais horas do dia possui uma maior concentração de $CO$ e $NOx$? em cada estação e cada dia da semana.
-2. 
-3. Qual é a amplitude termica de cada região, em cada uma das estações do ano.
+1. Em quais horas do dia possui uma maior concentração de $CO$ e $NOx$? em cada estação e cada dia da semana. 
+2. Qual é a amplitude termica de cada região, em cada uma das estações do ano.
+3. Há alguma discrepância clara entre os dados de (definir algum) entre uma zona central e zonas mais afastadas?
+  * Gráfico de Violino (Violin Plot): Eixo X com o nome das estações e eixo Y com a concentração
 4. O quão significativa foi a queda geral de poluentes durante o isolamento da pandemia em comparação aos anos anteriores?
+  * Gráfico de linhas com a média dos poluentes ao longo dos anos, incluindo um bloco sombreado no fundo cobrindo exatamente os meses de 2020 e 2021 para contrastar a queda.
 
 ## Pré-processameanto
 ### Dados redundantes
