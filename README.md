@@ -36,6 +36,7 @@ Agora iremos listar os parametros especificos das estações (não são medidos 
 * $NO$ Monóxido de Nitrogênio
 * $NO_2$ Dióxido de Nitrogênio
 * $NOx$ Óxidos de Nitrogênio, junto com $NO$ e $NO_2$ formam o conjunto de variaveis $NOx$, tem seu valor calculado somando $NO$ com $NO_2$. 
+* $O_3$ Gás Ozonio 
 * $MP_{10}$ Material particulado com diâmetro aerodinâmico equivalente de corte de 10 micrômetros.
 * $MP_{2,5}$ Material particulado com diâmetro aerodinâmico equivalente de corte de 2,5 micrômetros.
 
@@ -52,9 +53,9 @@ As concentrações de **Monóxido de Carbono** ($CO$) e **Hidrocarbonetos** ($HC
 
 ## Perguntas
 Os conhecimentos que buscamos explorar por meio da visualização de dados são:
-1. Como a variavel do Monóxido de Carbono ($CO$) se comporta durante os dias da semana. 
-2. Existe um padrão de pico na concentração de NOx (óxido de nitrogênio) e CO (monóxido de carbono) durante os horários de maior fluxo de trânsito?
-3. Há alguma discrepância clara entre os dados de (definir algum) entre uma zona central e zonas mais afastadas?
+1. Em quais horas do dia possui uma maior concentração de $CO$ e $NOx$? em cada estação e cada dia da semana.
+2. 
+3. Qual é a amplitude termica de cada região, em cada uma das estações do ano.
 4. O quão significativa foi a queda geral de poluentes durante o isolamento da pandemia em comparação aos anos anteriores?
 
 ## Pré-processameanto
@@ -63,9 +64,10 @@ Algumas variaveis podem ser conseguidas utilziando as outras, a seguir iremos as
 1. $NO$, $NO_2$ e $NOx$, utilizando a formula $NOx = NO + NO_2$ pode-se conseguir o valor de qualquer uma tendo os outros dois
 2. Latitude e Longitude juntos representam a mesma coisa que as coordenadas x e y do SIRGAS 2000
 3. A variavel codnum e estação representam qual a estação de monitoramento que fez aquela leitura, a diferença é que uma é uma string enquanto a outra é um numero inteiro
-### Análise estatística
-* Detecção de dados espúrios:
-Detectar valores coletados com algum erro, para então remove-los da base de dados 
-
+### Pré-processameanto necessário para as perguntas propostas
+1. Iremos agrupar por horário, dia da semana e estações de monitoramento, então teremos 5(número de estações com leitor de $CO$ ou $NOx$) * 7(dias da semana) * 24(horas do dia) = 840 grupos, em cada grupo então iremos calcular uma média das duas variaveis que serão apresentadas, agora iremos juntas os valores em 35 tabelas (dias da semana * estações de monitoramento) ordenando por horário, para então apresentarmos com um graficos de linhas.
+2. 
+3. 
+4. Iremos agrupar incialmente por ano, então separado em cada ano iremos agrupar novamente por mes, e em cada mês iremos calcular a média das variaveis relacionadas a poluentes, assim iremos conseguir um grafico de cada ano com no eixo x o mes e no eixo y o índice de qualidade do ar (IQAr), assim nos teremos 15 graficos que cada um possui 
 ### Informações externas 
 link para desrições do mapa do rio de janeiro https://www.rio.rj.gov.br/dlstatic/10112/6438610/4221811/74LUOSPLC572017.pdf
