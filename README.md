@@ -74,3 +74,4 @@ Algumas variaveis podem ser conseguidas utilziando as outras, a seguir iremos as
 4. Iremos agrupar incialmente por ano, então separado em cada ano iremos agrupar novamente por mes, e em cada mês iremos calcular a média das variaveis relacionadas a poluentes, assim iremos conseguir um grafico de cada ano com no eixo x o mes e no eixo y o índice de qualidade do ar (IQAr), assim nos teremos 15 graficos que cada um possui 
 ### Informações externas 
 link para desrições do mapa do rio de janeiro https://www.rio.rj.gov.br/dlstatic/10112/6438610/4221811/74LUOSPLC572017.pdf
+link do site oficial do monitorAR https://monitorar.mma.gov.br/mapa?nuLatitude=-22.8862&nuLongitude=-43.5567
