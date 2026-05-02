@@ -42,6 +42,29 @@ Agora iremos listar os parametros especificos das estações (não são medidos 
 * $MP_{2,5}$ Material particulado com diâmetro aerodinâmico equivalente de corte de 2,5 micrômetros.
 
 As concentrações de **Monóxido de Carbono** ($CO$) e **Hidrocarbonetos** ($HC$) são medidas em partes por milhão [ppm], enquanto as demais são medidas em microgramas por metro cúbico de ar [$\mu g/m^3$].
+
+Durante o levantamento dos valores mínimos e máximos, foi possível identificar a presença de anomalias nos registros brutos do dataset. Valores extremos e meteorologicamente improváveis para a cidade do Rio de Janeiro — como temperaturas de 0 °C ou picos irreais de 54,47 °C, além de umidade relativa do ar a 0% — são claramente provenientes de erros de leitura ou falhas temporárias nos sensores das estações de monitoramento.
+
+### Critérios de Qualidade
+No Brasil possuimos o Indicie da Qualidade do Ar (IQAr), utilizando ele, podemos classifcar a qualidade do ar em 5 niveis: N1, N2, N3, N4 e N5, está classifcação é feita para cada um dos seguintes compostos: $CO$, $MP_{10}$, $MP_{2,5}$, $NO_2$, $O_3$ e $SO_2$, eles podem ser classificados como demonstrado na tabela a seguir:
+
+| Qualidade do Ar | Índice | $MP_{10}$<br>($µg/m^3$)<br>24h | $MP_{2,5}$<br>($µg/m^3$)<br>24h | $O_3$<br>($µg/m^3$)<br>8h | $CO$<br>(ppm)<br>8h | $NO_2$<br>($µg/m^3$)<br>1h | $SO_2$<br>($µg/m^3$)<br>24h |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **N1 - Boa** | 0 – 40 | 0 – 45 | 0 – 15 | 0 – 100 | 0 – 9 | 0 – 200 | 0 – 40 |
+| **N2 – Moderada** | 41 – 80 | >45 - 100 | >15 - 50 | >100 – 130 | >9 – 11 | >200 – 240 | >40 – 50 |
+| **N3 – Ruim** | 81 – 120 | >100 - 150 | >50 - 75 | >130 – 160 | >11 – 13 | >240 – 320 | >50 – 125 |
+| **N4 – Muito Ruim** | 121 – 200 | >150 - 250 | >75 - 125 | >160 – 200 | >13 – 15 | >320 – 1130 | >125 – 800 |
+| **N5 – Péssima** | 201 - 400 | >250 - 600 | >125 - 300 | >200 - 800 | >15 - 50 | >1130 - 3750 | >800 - 2620 |
+
+- N1 Boa (0-40): Qualidade do ar satisfatória, pouco ou nenhum risco à saúde.
+- N2 Moderada (41-80): Qualidade aceitável, com riscos mínimos para grupos extremamente sensíveis.
+- N3 Ruim (81-120): População pode apresentar sintomas como tosse e ardor nos olhos. Grupos sensíveis (crianças, idosos, asmáticos) podem ter efeitos sérios.
+- N4 Muito Ruim (121-200): Efeitos na saúde são mais prováveis para o público em geral.
+- N5  Péssima (>200): Condições insalubres, gerando sérios riscos à saúde.
+
+### Viariaveis não Citadas no Indicie
+Podemos observar que as variaveis $HCT$ e $NO$ não são listados no indicie, mas eles são coletados pois estes estão relacionados com a formação de $O_3$, logo estão indiretamente relacionados a qualidade do ar.
+
 ### Descrição das estações de monitoramento
 1. Largo da Carioca / Centro (CA): O3, CO, MP10
 2. Praça Cardeal Arco Verde / Copacabana (AV): O3, MP10
@@ -55,13 +78,16 @@ As concentrações de **Monóxido de Carbono** ($CO$) e **Hidrocarbonetos** ($HC
 ## Perguntas
 Os conhecimentos que buscamos explorar por meio da visualização de dados são:
 1. Em quais horas do dia possui uma maior concentração de $CO$ e $NOx$? em cada estação e cada dia da semana. 
-2. Qual é a amplitude termica de cada região, em cada uma das estações do ano.
-3. Há alguma discrepância clara entre os dados de (definir algum) entre uma zona central e zonas mais afastadas?
-  * Gráfico de Violino (Violin Plot): Eixo X com o nome das estações e eixo Y com a concentração
+2. Qual é a amplitude termica de cada região, em cada uma das estações do ano, há algum outro fenômeno meteriológico que podemos observar com alguma visualização.
+* Utilizar uma visualização com o mapa da cidade em conjunto com os valores medidos na localização de cada estação meteriológica
+3. É possivel observar em alguma visualização a relação entre o $O_3$ e os $HCT$ e os $NOx$?
 4. O quão significativa foi a queda geral de poluentes durante o isolamento da pandemia em comparação aos anos anteriores?
-  * Gráfico de linhas com a média dos poluentes ao longo dos anos, incluindo um bloco sombreado no fundo cobrindo exatamente os meses de 2020 e 2021 para contrastar a queda.
+* Gráfico de linhas com a média dos poluentes ao longo dos anos, incluindo um bloco sombreado no fundo cobrindo exatamente os meses de 2020 e 2021 para contrastar a queda.
 
 ## Pré-processameanto
+
+### Correção de valores
+Detectar dados espurios (errados) faltantes, e resolvelos da melhor maneira para que as visualiações sejam realizadas
 ### Dados redundantes
 Algumas variaveis podem ser conseguidas utilziando as outras, a seguir iremos as listar:
 1. $NO$, $NO_2$ e $NOx$, utilizando a formula $NOx = NO + NO_2$ pode-se conseguir o valor de qualquer uma tendo os outros dois
@@ -69,9 +95,9 @@ Algumas variaveis podem ser conseguidas utilziando as outras, a seguir iremos as
 3. A variavel codnum e estação representam qual a estação de monitoramento que fez aquela leitura, a diferença é que uma é uma string enquanto a outra é um numero inteiro
 ### Pré-processameanto necessário para as perguntas propostas
 1. Iremos agrupar por horário, dia da semana e estações de monitoramento, então teremos 5(número de estações com leitor de $CO$ ou $NOx$) * 7(dias da semana) * 24(horas do dia) = 840 grupos, em cada grupo então iremos calcular uma média das duas variaveis que serão apresentadas, agora iremos juntas os valores em 35 tabelas (dias da semana * estações de monitoramento) ordenando por horário, para então apresentarmos com um graficos de linhas.
-2. 
-3. 
-4. Iremos agrupar incialmente por ano, então separado em cada ano iremos agrupar novamente por mes, e em cada mês iremos calcular a média das variaveis relacionadas a poluentes, assim iremos conseguir um grafico de cada ano com no eixo x o mes e no eixo y o índice de qualidade do ar (IQAr), assim nos teremos 15 graficos que cada um possui 
+2. Para realizar a representação utilizando as estações do ano, os dados serão agrupados duas vezes, uma por estação do ano e uma por estação meteriológica, então assim teremos 4 * 8 = 32 grupos, então calcularemos média e desvio padrão das variaveis Temperatura, o vetor do vento, umidade relativa do ar, pressão atmosférica e precipitação pluviométrica.
+3. Somente a estação IR mede os valores necessários para essa analise, realizaremos uma amostragem para facilitar o processamento e não ocorrer obstrução visual. Utilizaremos posição (x e y) em conjunto com a cor, observar os relacionamentos entre as variaveis analisadas.
+4. Iremos agrupar incialmente por ano, então separado em cada ano iremos agrupar novamente por mes, e em cada mês iremos calcular a média das variaveis relacionadas a poluentes, assim iremos conseguir um grafico de cada ano com no eixo x o mes e no eixo y o índice de qualidade do ar (IQAr), assim nos teremos 15 graficos que cada um possui. 
 ### Informações externas 
 link para desrições do mapa do rio de janeiro https://www.rio.rj.gov.br/dlstatic/10112/6438610/4221811/74LUOSPLC572017.pdf
 link do site oficial do monitorAR https://monitorar.mma.gov.br/mapa?nuLatitude=-22.8862&nuLongitude=-43.5567
