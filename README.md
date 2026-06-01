@@ -66,14 +66,14 @@ No Brasil possuimos o Indicie da Qualidade do Ar (IQAr), utilizando ele, podemos
 Podemos observar que as variaveis $HCT$ e $NO$ não são listados no indicie, mas eles são coletados pois estes estão relacionados com a formação de $O_3$, logo estão indiretamente relacionados a qualidade do ar.
 
 ### Descrição das estações de monitoramento
-1. Largo da Carioca / Centro (CA): O3, CO, MP10
-2. Praça Cardeal Arco Verde / Copacabana (AV): O3, MP10
-3. São Cristóvão (SC): O3, MP10
-4. Praça Sans Peña / Tijuca (SP): NOx, O3, MP10
-5. Irajá (IR): SO2, NOx, O3, CO, HC, MP2.5, MP10
-6. Bangu (BG): NOx, O3, MP10
-7. Campo Grande (CG): NOx, O3, MP10
-8. Pedra de Guaratiba (PG): O3, MP10
+1. Praça Cardeal Arco Verde / Copacabana (AV): O3, MP10     
+2. Bangu (BG): NOx, O3, MP10                                # NOX
+3. Largo da Carioca / Centro (CA): O3, CO, MP10             # CO
+4. Campo Grande (CG): NOx, O3, MP10                         # NOX
+5. Irajá (IR): SO2, NOx, O3, CO, HC, MP2.5, MP10            # CO e NOX
+6. Pedra de Guaratiba (PG): O3, MP10
+7. São Cristóvão (SC): O3, MP10
+8. Praça Sans Peña / Tijuca (SP): NOx, O3, MP10             # NOX
 
 ## Perguntas
 Os conhecimentos que buscamos explorar por meio da visualização de dados são:
