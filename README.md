@@ -101,3 +101,20 @@ Algumas variaveis podem ser conseguidas utilziando as outras, a seguir iremos as
 ### Informações externas 
 link para desrições do mapa do rio de janeiro https://www.rio.rj.gov.br/dlstatic/10112/6438610/4221811/74LUOSPLC572017.pdf
 link do site oficial do monitorAR https://monitorar.mma.gov.br/mapa?nuLatitude=-22.8862&nuLongitude=-43.5567
+
+
+### Tutorial visualização oergunta 1:
+Crie um ambinete virtual, o ative e então instale as dependencias. 
+```Bash
+python3 -m venv ./venv/
+source venv/bin/activate
+pip install requirements.txt
+```
+Após a primeira vez, só é necessario ativar o ambiente.
+```Bash
+source venv/bin/activate
+```
+Com o ambiente aberto, abra este diretório com o VScode, selecione `visualizacao_1.ipynb`, baixe as extensões necessarias que o VScode informar, selecione o ambiente virtual no canto superior direito.
+Para que as visualizações apareçam, é necessário que o data-set esteja no diretório `data_set` com o nome `data_set_completo.csv`.
+
+As visualizações estão presentes no final no arquivo `ipynb`
