@@ -66,7 +66,7 @@ No Brasil possuimos o Indicie da Qualidade do Ar (IQAr), utilizando ele, podemos
 Podemos observar que as variaveis $HCT$ e $NO$ não são listados no indicie, mas eles são coletados pois estes estão relacionados com a formação de $O_3$, logo estão indiretamente relacionados a qualidade do ar.
 
 ### Descrição das estações de monitoramento
-1. Praça Cardeal Arco Verde / Copacabana (AV): O3, MP10     
+1. Praça Cardeal Arco Verde / Copacabana (AV): O3, MP10
 2. Bangu (BG): NOx, O3, MP10                                # NOX
 3. Largo da Carioca / Centro (CA): O3, CO, MP10             # CO
 4. Campo Grande (CG): NOx, O3, MP10                         # NOX
